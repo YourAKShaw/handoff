@@ -1,0 +1,41 @@
+name: Bug report
+description: Report incorrect guidance, an unsafe handoff, or a validator failure.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues before submitting. Use a minimal, sanitized example; remove secrets, one-time codes, private code, and personal data.
+  - type: input
+    id: affected-files
+    attributes:
+      label: Affected files or workflow
+      placeholder: workflows/save-handoff.md or scripts/validate-skill.py
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the smallest prompt, session outline, or command that demonstrates the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and impact
+      description: Include relevant output or the handoff produced. Distinguish the skill's instructions from the host or model's behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Version and environment
+      description: Include the commit or release. For scripts, add OS, Python version, and exact command; for agent behavior, add host, model, and how the skill was installed.
+    validations:
+      required: true
